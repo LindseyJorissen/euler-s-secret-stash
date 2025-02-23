@@ -15,5 +15,18 @@ def triangle_numbers(limit):
     for i in range(1, limit + 1):
         current_sum += i
         trianglenumbers.append(current_sum)
-
     return trianglenumbers
+
+def is_even(n):
+    if n%2 == 0:
+        return True
+
+def collatz_sequence(n):
+    chain = 1
+    while n >1:
+        if is_even(n):
+            n /= 2
+        else:
+            n = (3*n)+1
+        chain +=1
+    return chain
